@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import useMenu from '../../../hooks/useMenu';
 import FoodCard from '../../../components/FoodCard/FoodCard';
 import { useParams } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 
 const Order = () => {
     const categories=['salad','pizza','soup', 'dessert','drinks']
@@ -20,6 +21,9 @@ const Order = () => {
     const drinks = menu.filter(item => item.category === 'drinks')
     return (
         <div>
+            <Helmet>
+                <title>Bistro Boss | Order</title>
+            </Helmet>
             <Cover img={coverOrder} title='Order Food' ></Cover>
             <Tabs defaultIndex={tabIndex} onSelect={(index)=> setTabIndex(index)}>
                 <TabList>
