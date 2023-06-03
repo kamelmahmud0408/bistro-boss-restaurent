@@ -53,7 +53,7 @@ const AdminHome = () => {
 
 
     return (
-        <div className="w-full m-0 ">
+        <div className="w-full ">
             <h2 className="text-3xl font-semibold text-center">Hi, {user.displayName}</h2>
             <div className="stats w-full shadow">
 
